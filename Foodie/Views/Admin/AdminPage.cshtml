@@ -1,0 +1,131 @@
+﻿@{
+    ViewBag.Title = "logInTemp";
+}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container"> 
+
+        @using (Html.BeginForm("AdminPage", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            
+             @Html.AntiForgeryToken()
+                            <div class="form-group">
+                                <label for="sel1">Select Your Choice:</label>
+                                <select class="form-control" id="selector" name="selector">
+                                    <option value="About Us">About Us</option>
+                                    <option value="Soft Drinks">Soft Drinks</option>
+                                    <option value="Bread">Bread</option>
+                                    <option value="Dishes">Featured Dishes</option>
+                                    <option value="Slider1">image slider 1</option>
+                                    <option value="Slider2">image slider 2</option>
+                                    <option value="Slider3">image slider 3</option>
+                                    <option value="Breakfast1">Breakfast1</option>
+                                    <option value="Breakfast2">Breakfast2</option>
+                                    <option value="Breakfast3">Breakfast3</option>
+                                    <option value="Breakfast4">Breakfast4</option>
+                                    <option value="Breakfast5">Breakfast5</option>
+                                    <option value="Breakfast6">Breakfast6</option>
+                                    <option value="Breakfast7">Breakfast7</option>
+                                    <option value="Breakfast8">Breakfast8</option>
+                                    <option value="Breakfast9">Breakfast9</option>
+                                    <option value="Breakfast10">Breakfast10</option>
+                                    <option value="Breakfast11">Breakfast11</option>
+                                    <option value="Breakfast12">Breakfast12</option>
+                                    <option value="Lunch1">Lunch1</option>
+                                    <option value="Lunch2">Lunch2</option>
+                                    <option value="Lunch3">Lunch3</option>
+                                    <option value="Lunch4">Lunch4</option>
+                                    <option value="Lunch5">Lunch5</option>
+                                    <option value="Lunch6">Lunch6</option>
+                                    <option value="Lunch7">Lunch7</option>
+                                    <option value="Lunch8">Lunch8</option>
+                                    <option value="Lunch9">Lunch9</option>
+                                    <option value="Lunch10">Lunch10</option>
+                                    <option value="Lunch11">Lunch11</option>
+                                    <option value="Lunch12">Lunch12</option>
+                                    <option value="Dinner1">Dinner1</option>
+                                    <option value="Dinner2">Dinner2</option>
+                                    <option value="Dinner3">Dinner3</option>
+                                    <option value="Dinner4">Dinner4</option>
+                                    <option value="Dinner5">Dinner5</option>
+                                    <option value="Dinner6">Dinner6</option>
+                                    <option value="Dinner7">Dinner7</option>
+                                    <option value="Dinner8">Dinner8</option>
+                                    <option value="Dinner9">Dinner9</option>
+                                    <option value="Dinner10">Dinner10</option>
+                                    <option value="Desert1">Desert1</option>
+                                    <option value="Desert2">Desert2</option>
+                                    <option value="Desert3">Desert3</option>
+                                    <option value="Desert4">Desert4</option>
+                                    <option value="Desert5">Desert5</option>
+                                    <option value="Desert6">Desert6</option>
+                                    <option value="Desert7">Desert7</option>
+                                    <option value="Desert8">Desert8</option>
+                                    <option value="Desert9">Desert9</option>
+                                    <option value="Desert10">Desert10</option>
+                                    <option value="Desert11">Desert11</option>
+                                    <option value="Special1">Special1</option>
+                                    <option value="Special2">Special2</option>
+                                    <option value="Special3">Special3</option>
+                                    <option value="Special4">Special4</option>
+                                    <option value="Special5">Special5</option>
+                                    <option value="Special6">Special6</option>
+                                    <option value="Special7">Special7</option>
+                                    <option value="Special8">Special8</option>
+                                    <option value="Special9">Special9</option>
+                                    <option value="Special10">Special10</option>
+                                    <option value="Special11">Special11</option>
+
+
+                                </select>
+                            </div>
+
+            <div class="form-group">
+                <label for="usr">Title</label>
+                <input type="text" class="form-control" style="width:100%" id="title" name="title">
+
+            </div>
+
+            <div class="form-group">
+                <label for="usr">Description</label>
+                <input type="text" class="form-control" style="width:100%" id="description" name="description">
+
+            </div>
+
+            <div class="well-lg">
+                <label for="usr">Photo</label>
+                <input type="file" name="file" class="well" />
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Post" class="btn btn-primary" />
+            </div>
+            
+        }
+        
+        
+        
+        
+        
+        @using (Html.BeginForm("LogOut", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+            <div class="form-group">
+                <input type="submit" value="Log Out" class="btn btn-primary" />
+            </div>
+        }
+        
+
+    </div>
+
+</body>
+</html>

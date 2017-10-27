@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ResModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="adminList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="userPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userFullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FoodDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="selector" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="foodTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="foodDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="foodPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ResContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="adminLists" EntityType="Self.adminList" />
+    <EntitySet Name="FoodDetails" EntityType="Self.FoodDetail" />
+  </EntityContainer>
+</Schema>

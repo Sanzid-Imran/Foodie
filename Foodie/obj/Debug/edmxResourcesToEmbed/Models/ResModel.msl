@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ResModelStoreContainer" CdmEntityContainer="ResContext">
+    <EntitySetMapping Name="adminLists">
+      <EntityTypeMapping TypeName="ResModel.adminList">
+        <MappingFragment StoreEntitySet="adminList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+          <ScalarProperty Name="userFullName" ColumnName="userFullName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FoodDetails">
+      <EntityTypeMapping TypeName="ResModel.FoodDetail">
+        <MappingFragment StoreEntitySet="FoodDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="selector" ColumnName="selector" />
+          <ScalarProperty Name="foodTitle" ColumnName="foodTitle" />
+          <ScalarProperty Name="foodDescription" ColumnName="foodDescription" />
+          <ScalarProperty Name="foodPhoto" ColumnName="foodPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
