@@ -1,4 +1,4 @@
-# Test (Foodie)
+Foodie
 
 Basically it's a restaurant website to advertise its identity.
 This was developed as per demand of a restaurant located in Mirpur, Dhaka, Bangladesh.
